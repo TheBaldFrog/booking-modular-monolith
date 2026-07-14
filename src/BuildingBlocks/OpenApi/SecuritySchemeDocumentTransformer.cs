@@ -24,15 +24,14 @@ public class SecuritySchemeDocumentTransformer : IOpenApiDocumentTransformer
                 BearerFormat = "JWT",
                 In = ParameterLocation.Header,
                 Description =
-                                                       "Enter 'Bearer' [space] and your token in the text input below.\n\nExample: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'",
+                    "Enter only your JWT token, without the 'Bearer' prefix (Swagger adds it automatically).\n\nExample: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'",
             },
             ["ApiKey"] = new OpenApiSecurityScheme
             {
                 Name = "X-API-KEY",
                 Type = SecuritySchemeType.ApiKey,
                 In = ParameterLocation.Header,
-                Description =
-                                                       "Enter your API key in the text input below.\n\nExample: '12345-abcdef'",
+                Description = "Enter your API key in the text input below.\n\nExample: '12345-abcdef'",
             },
         };
 
@@ -43,6 +42,16 @@ public class SecuritySchemeDocumentTransformer : IOpenApiDocumentTransformer
                 document.Components.SecuritySchemes.Add(key, scheme);
             }
         }
+
+        // Declaring the schemes is not enough: without a security requirement Swagger UI
+        // never attaches the Authorization header to requests.
+        document.Security ??= new List<OpenApiSecurityRequirement>();
+        document.Security.Add(
+            new OpenApiSecurityRequirement
+            {
+                [new OpenApiSecuritySchemeReference("Bearer", document)] = new List<string>(),
+            }
+        );
 
         return Task.CompletedTask;
     }
