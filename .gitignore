@@ -435,6 +435,9 @@ fabric.properties
 
 *.jwk
 
+# Duende IdentityServer automatic key management store
+src/Api/src/keys/
+
 # Monitoring
 **/grafana-data
 
