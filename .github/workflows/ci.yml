@@ -20,6 +20,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Check code format
+        run: |
+          dotnet tool restore
+          dotnet tool run dotnet-csharpier . --check
+
       - name: Build and Test Flight Microservice
         uses: ./.github/actions/build-test
         if: success()

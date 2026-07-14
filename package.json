@@ -7,13 +7,17 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky && dotnet tool restore",
-    "format": "dotnet tool run dotnet-csharpier booking-modular-monolith.sln",
-    "ci-format": "dotnet tool run dotnet-csharpier booking-modular-monolith.sln --check",
+    "format": "dotnet tool run dotnet-csharpier .",
+    "ci-format": "dotnet tool run dotnet-csharpier . --check",
     "upgrade-packages": "dotnet outdated --upgrade"
+  },
+  "lint-staged": {
+    "*.cs": "dotnet tool run dotnet-csharpier"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
-    "husky": "^9.1.6"
+    "husky": "^9.1.6",
+    "lint-staged": "^17.0.8"
   }
 }
