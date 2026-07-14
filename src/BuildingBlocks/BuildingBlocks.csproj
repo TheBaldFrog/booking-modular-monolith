@@ -43,7 +43,7 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.3" />
     <PackageReference Include="MongoDB.Driver" Version="3.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="Scalar.AspNetCore" Version="2.12.39" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.16.11" />
     <PackageReference Include="Scrutor" Version="7.0.0" />
     <PackageReference Include="Sieve" Version="2.5.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.2" />
