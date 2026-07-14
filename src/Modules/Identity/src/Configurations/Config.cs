@@ -58,7 +58,7 @@ public static class Config
                     Constants.StandardScopes.IdentityApi,
                     Constants.StandardScopes.BookingModularMonolith,
                 },
-                AccessTokenLifetime = 3600, // authorize the client to access protected resources
+                AccessTokenLifetime = 86400, // authorize the client to access protected resources
                 IdentityTokenLifetime = 3600, // authenticate the user,
                 AlwaysIncludeUserClaimsInIdToken = true, // Include claims in ID token
             },
