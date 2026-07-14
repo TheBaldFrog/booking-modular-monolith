@@ -16,13 +16,25 @@
     <PackageReference Include="Roslynator.Analyzers" PrivateAssets="all" Version="4.15.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" PrivateAssets="all" Version="4.15.0">
+    <PackageReference
+      Include="Roslynator.CodeAnalysis.Analyzers"
+      PrivateAssets="all"
+      Version="4.15.0"
+    >
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Roslynator.Formatting.Analyzers" PrivateAssets="all" Version="4.15.0">
+    <PackageReference
+      Include="Roslynator.Formatting.Analyzers"
+      PrivateAssets="all"
+      Version="4.15.0"
+    >
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" PrivateAssets="all" Version="17.14.15">
+    <PackageReference
+      Include="Microsoft.VisualStudio.Threading.Analyzers"
+      PrivateAssets="all"
+      Version="17.14.15"
+    >
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="AsyncAwaitBestPractices" PrivateAssets="all" Version="10.0.0">
@@ -40,5 +52,4 @@
     <AnalysisLevel>latest-Recommended</AnalysisLevel>
     <AnalysisMode>Recommended</AnalysisMode>
   </PropertyGroup>
-
 </Project>

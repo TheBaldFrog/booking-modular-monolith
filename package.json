@@ -7,12 +7,12 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky && dotnet tool restore",
-    "format": "dotnet tool run dotnet-csharpier .",
-    "ci-format": "dotnet tool run dotnet-csharpier . --check",
+    "format": "dotnet tool run csharpier format .",
+    "ci-format": "dotnet tool run csharpier check .",
     "upgrade-packages": "dotnet outdated --upgrade"
   },
   "lint-staged": {
-    "*.cs": "dotnet tool run dotnet-csharpier"
+    "*.cs": "dotnet tool run csharpier format"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

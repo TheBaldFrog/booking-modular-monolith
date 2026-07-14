@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <Sdk Name="Aspire.AppHost.SDK" Version="13.1.1"/>
+  <Sdk Name="Aspire.AppHost.SDK" Version="13.1.1" />
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -25,5 +24,4 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Api\src\Api.csproj" />
   </ItemGroup>
-
 </Project>

@@ -74,7 +74,8 @@ public class CustomeDiagnosticsProvider(IMeterFactory meterFactory, IOptions<Obs
                     idFormat: ActivityIdFormat.W3C,
                     tags: createActivityInfo.Tags
                 )
-                ?.Start() ?? Activity.Current;
+                ?.Start()
+            ?? Activity.Current;
 
         try
         {
@@ -108,7 +109,8 @@ public class CustomeDiagnosticsProvider(IMeterFactory meterFactory, IOptions<Obs
                     idFormat: ActivityIdFormat.W3C,
                     tags: createActivityInfo.Tags
                 )
-                ?.Start() ?? Activity.Current;
+                ?.Start()
+            ?? Activity.Current;
 
         try
         {

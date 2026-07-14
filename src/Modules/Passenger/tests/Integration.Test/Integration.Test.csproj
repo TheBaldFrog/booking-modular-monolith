@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <ItemGroup>
     <None Update="xunit.runner.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -18,5 +17,4 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Api\src\Api.csproj" />
   </ItemGroup>
-
 </Project>

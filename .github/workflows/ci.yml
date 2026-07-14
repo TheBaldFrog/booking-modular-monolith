@@ -28,7 +28,7 @@ jobs:
       - name: Check code format
         run: |
           dotnet tool restore
-          dotnet tool run dotnet-csharpier . --check
+          dotnet tool run csharpier check .
 
       - name: Build and Test Flight Microservice
         uses: ./.github/actions/build-test
